@@ -1,0 +1,40 @@
+# Analytical Coding Guide
+
+::: {.lead-para}
+This site provides the Cabinet Office Analysis & Insight team's guide for coding in analytical projects.
+:::
+PAGE 3
+The purpose of this guide is to provide simple advice about how to use code in our analysis. It is broken down into three sections: **workflow**, **style** and **output**. This site is a 'living document' that will evolve as our approach develops/changes. While the guide is intended to be language independent, examples are more likely to be based on using [R](https://www.r-project.org) or [R Studio](https://www.rstudio.com). Our approach to coding and analysis is particularly influenced by the [Tidyverse](https://tidyverse.org).
+
+In addition to these guidelines, we also have a list of other [resources]() that provide advice and guidance on coding for analytical projects, many of which have influenced this guide.
+
+## Workflow
+Our [workflow]() guidelines set out how you should structure and manage code in an analytical project.
+
+1. Project-based working
+2. Dependencies and package management
+3. Version control (git)
+4. QA and code review
+
+## Style
+Our [style]() guidelines set out how to write code for a project.
+
+1. Naming conventions
+2. Syntax
+3. Pipe
+4. Comments and documentation
+5. Error messages
+
+## Output
+Our [output]() guidelines set out some principles for presenting results.
+
+1. Tables
+2. Graphs
+3. Slide decks
+4. Publishing
+
+---
+
+::: {.small-para}
+This site was built using [govdown](https://ukgovdatascience.github.io/govdown/).
+:::
