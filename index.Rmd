@@ -1,37 +1,33 @@
-# Analytical Coding Guide
+# Welcome to the GORS L&D Pages!
 
 ::: {.lead-para}
-This site provides the Cabinet Office Analysis & Insight team's guide for coding in analytical projects.
+This site aims to be a one-stop shop for all learning & development resources pertaining to Operational Research within the Government Operational Research Service (GORS).
 :::
-PAGE 1
-The purpose of this guide is to provide simple advice about how to use code in our analysis. It is broken down into three sections: **workflow**, **style** and **output**. This site is a 'living document' that will evolve as our approach develops/changes. While the guide is intended to be language independent, examples are more likely to be based on using [R](https://www.r-project.org) or [R Studio](https://www.rstudio.com). Our approach to coding and analysis is particularly influenced by the [Tidyverse](https://tidyverse.org).
 
-In addition to these guidelines, we also have a list of other [resources]() that provide advice and guidance on coding for analytical projects, many of which have influenced this guide.
+It's tough being an operational researcher, there's so much you need to learn, but it isn't always easy to acquire that knowledge when needed. Resources are quite sparse and not always easily obtainable, this resource aims to fix that. Here you will find links to resources that we think will be useful to you as an operational researcher in the civil service. This site is split into two sections, the L&D Library and FAQs:
 
-## Workflow
-Our [workflow]() guidelines set out how you should structure and manage code in an analytical project.
+## L&D Library
+Our [L&D Library](library.html) is a database of curated courses that cover various topics which fall under the remit of a typical operational researcher. Here we cover:
 
-1. Project-based working
-2. Dependencies and package management
-3. Version control (git)
-4. QA and code review
+1. General Analytical Skills
+2. Programming/Data Science
+3. Hard OR
+4. Soft OR
+5. General Professional Skills
 
-## Style
-Our [style]() guidelines set out how to write code for a project.
+## FAQs
+Our [FAQs](faq.html) page answers some of those niggling questions you may have about GORS and it's L&D approach. Here we cover:
 
-1. Naming conventions
-2. Syntax
-3. Pipe
-4. Comments and documentation
-5. Error messages
+1. Booking External Courses
+2. L&D Commitments
+3. CPD Log
 
-## Output
-Our [output]() guidelines set out some principles for presenting results.
+<br>
 
-1. Tables
-2. Graphs
-3. Slide decks
-4. Publishing
+::: {.warning}
+If you have any suggestions for these pages, questions about L&D, would like to run an internal course for GORS members, or would like to get involved with our group please get in touch with us: [SET UP EMAIL]()
+:::
+
 
 ---
 

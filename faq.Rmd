@@ -1,37 +1,52 @@
-# Analytical Coding Guide
+# FAQs
 
-::: {.lead-para}
-This site provides the Cabinet Office Analysis & Insight team's guide for coding in analytical projects.
-:::
-PAGE 3
-The purpose of this guide is to provide simple advice about how to use code in our analysis. It is broken down into three sections: **workflow**, **style** and **output**. This site is a 'living document' that will evolve as our approach develops/changes. While the guide is intended to be language independent, examples are more likely to be based on using [R](https://www.r-project.org) or [R Studio](https://www.rstudio.com). Our approach to coding and analysis is particularly influenced by the [Tidyverse](https://tidyverse.org).
+If you believe any of the information presented below is incorrect, please get in touch here: [SET UP EMAIL]()
 
-In addition to these guidelines, we also have a list of other [resources]() that provide advice and guidance on coding for analytical projects, many of which have influenced this guide.
+### Q: How can I book an external or Civil Service Learning Course?
+**A:** See our document on how to book an external course: [GORS Guide to booking an external courses](files/GORS Guide to booking an external course v2.0.pptx)
 
-## Workflow
-Our [workflow]() guidelines set out how you should structure and manage code in an analytical project.
+### Q: How much L&D time am I entitled to?
+**A:** There are a few important numbers to keep in mind.
 
-1. Project-based working
-2. Dependencies and package management
-3. Version control (git)
-4. QA and code review
+* As a civil servant, you're entitled to **5 days** of dedicated "learning and development" per year.
+* As a badged GORS analyst, you're expected to undertake a minimum of **100 hours** of CPD per year (pro-rata for part-time staff) which should be logged in a CPD log. At least half of this should be OR focused.
+* A general rule of thumb is that L&D should take on average **5-10%** of your time each week, or somewhere between a few hours and a half day if you work full time.
 
-## Style
-Our [style]() guidelines set out how to write code for a project.
+Don't forget that learning on the job also counts as development (and can be included towards the required 100 hours for GORS).
 
-1. Naming conventions
-2. Syntax
-3. Pipe
-4. Comments and documentation
-5. Error messages
+### Q: How should I log my 100 hours of CPD for GORS?
+**A:** The following template is endorsed by GORS CMU: [GORS CPD Log](files/GORS_CPD_Log.xlsm).
+ 
+To note, from April 2020 it will become mandatory for the CPD log to be signed off by another OR.
 
-## Output
-Our [output]() guidelines set out some principles for presenting results.
+### Q: How should I decide what L&D to undertake?
+**A:** Speak to your line manager or mentor about your development needs in the first instance. If you're unsure what learning will help you meet those needs, or would just like to browse what's available, have a look at our [L&D Library](library.html).
 
-1. Tables
-2. Graphs
-3. Slide decks
-4. Publishing
+### Q: What can I do to make time for L&D?
+**A:** Some people find it helpful to schedule a certain time each week or fortnight to dedicate to L&D activities. It can be helpful to speak with your line manager about this if you're concerned about getting pulled into other work during this time -- it may be possible for you to agree a "quiet" period each week where you ignore incoming emails and focus solely on L&D. At times business need may mean you can't spend the same amount of time on L&D, though this should average out over a year.
+
+### Q: I'm struggling to get enough L&D time, what should I do?
+**A:** If you feel you're not getting enough time to do the development you need, speak to your line manager. Development should be a key part of everyone's monthly performance discussions with their manager. You're also welcome to discuss this with your head of profession or deputy head of profession as all badged GORS members are expected to take on a certain amount of CPD each year.
+
+### Q: What counts as OR CPD?
+**A:** CPD activities should be focused on learning something new and relevant. It is sometimes helpful to refresh old knowledge, but the focus is on providing new insights, competencies, behaviours or learning. It is always the outcome of the learning rather than the method that matters. Any activity can count as CPD so long as something new and relevant has been learnt.
+
+Some examples of relevant CPD activity may include:
+
+* On-the-job learning,
+* Online courses,
+* Desk based learning,
+* Formal qualifications,
+* Short training courses,
+* Conferences,
+* Seminars (for example Coffee & Coding),
+* Reading,
+* Secondments,
+* Involvement in collaborative GORS initiatives,
+* The acquisition of new OR/data science skills,
+* Articles written to publications,
+* Specific work experience or project aimed at developing a new skill, or
+* Teaching and coaching.
 
 ---
 
