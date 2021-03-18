@@ -6,6 +6,8 @@ navbar:
     href: library.html
   - text: "FAQs"
     href: faq.html
+  - text: "Disclaimer"
+    href: disclaimer.html
 output:
   govdown::govdown_document:
     font: "sans-serif"
