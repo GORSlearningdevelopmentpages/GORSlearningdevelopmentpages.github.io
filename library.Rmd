@@ -6,7 +6,7 @@ If you would like to suggest any courses, resources, or other additions to the L
 
 ```{r, include = FALSE}
 library(tidyverse)
-#library(govdown)
+library(govdown)
 
 data <- read_csv("Courses/example courses3.csv")
 ```
@@ -19,7 +19,7 @@ Course reviews:
 ```{r, results = 'asis', echo = FALSE}
 
 
-data_gen <- data %>% filter(category == "general") %>% filter(duplicated(course)==F)
+data_gen <- data %>% filter(category == "General Analytics") %>% filter(duplicated(course)==F)
 for (i in 1:nrow(data_gen)){
   cat(paste0(" \n**",data_gen[i,1],"** \n"))
   cat(paste0(" \n* ",data_gen[i,5]," \n"))
@@ -86,6 +86,19 @@ cat(paste0(" \n","........."," \n"))
 **Description:**  Systems thinking is a problem-solving approach which explores the linkages and interactions between the people, perspectives and other factors present.
 
 ## General Professional Skills
+
+```{r courses_soft , results = 'asis', echo = FALSE}
+data_gen_prof <- data %>% filter(category == "General Professional") %>%filter(duplicated(course)==F)
+for (i in 1:nrow(data_gen_prof)){
+  cat(paste0(" \n**",data_gen_prof[i,1],"** \n"))
+  cat(paste0(" \n* ",data_gen_prof[i,5]," \n"))
+  cat(paste0(" \n* ",data_gen_prof[i,6]," \n"))
+  cat(paste0(" \n* ","More info: ",data_gen_prof[i,7]," \n"))
+cat(paste0(" \n","........."," \n"))
+}
+
+
+```
 
 [**Influencing skills**](https://learn.civilservice.gov.uk/courses/IEttRlSBQg2c_KxG0Ygu6w) <br>
 **Type:** Blended <br>
