@@ -75,7 +75,6 @@ for (i in 1:nrow(data_soft)){
 cat(paste0(" \n","........."," \n"))
 }
 
-
 ```
 
 [**Systems and complexity**](https://learn.civilservice.gov.uk/courses/btroxfDbQjWETY76YgxRdw) <br>
