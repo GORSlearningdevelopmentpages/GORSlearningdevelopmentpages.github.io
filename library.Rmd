@@ -87,7 +87,7 @@ cat(paste0(" \n","........."," \n"))
 
 ## General Professional Skills
 
-```{r courses_soft , results = 'asis', echo = FALSE}
+```{r courses_prof , results = 'asis', echo = FALSE}
 data_gen_prof <- data %>% filter(category == "General Professional") %>%filter(duplicated(course)==F)
 for (i in 1:nrow(data_gen_prof)){
   cat(paste0(" \n**",data_gen_prof[i,1],"** \n"))
@@ -169,7 +169,7 @@ cat(paste0(" \n","........."," \n"))
 
 ::: {.small-para}
 This site was built using
-```{r}
-#[govdown](https://ukgovdatascience.github.io/govdown/).
-```
+
+[govdown](https://ukgovdatascience.github.io/govdown/).
+
 :::
