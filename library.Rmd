@@ -2,7 +2,7 @@
 
 Welcome to the L&D Library. Here you can find a variety of recommended courses and feedback from your peers. Courses are listed by subject, which can be expanded on by using the plus buttons. If you are looking for a specific course, please click "Open all" and use Ctrl + F to search for it.
 
-If you would like to suggest any courses, resources, or other additions to the L&D Library please contact us: [SET UP EMAIL](). Our aim is to make this library as comprehensive and useful as possible.
+If you would like to suggest any courses, resources, or other additions to the L&D Library please contact us: [GORS-LD@justice.gov.uk](mailto:gors-ld@justice.gov.uk). Our aim is to make this library as comprehensive and useful as possible.
 
 Also, if you would like to explore the official guidance on quality assurance and producing quality analysis for government, please refer to the [Aqua Book](https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government). The Aqua Book is one of the products developed by the cross-departmental working group on analytical quality assurance and is a good practice guide to those working with analysis and analytical models.
 
