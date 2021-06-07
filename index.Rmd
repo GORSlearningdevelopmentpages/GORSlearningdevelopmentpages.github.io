@@ -25,7 +25,7 @@ Our [FAQs](faq.html) page answers some of those niggling questions you may have 
 <br>
 
 ::: {.warning}
-If you have any suggestions for these pages, questions about L&D, would like to run an internal course for GORS members, or would like to get involved with our group please get in touch with us: [SET UP EMAIL]()
+If you have any suggestions for these pages, questions about L&D, would like to run an internal course for GORS members, or would like to get involved with our group please get in touch with us: [GORS-LD@justice.gov.uk](mailto:gors-ld@justice.gov.uk)
 :::
 
 
