@@ -8,24 +8,27 @@ If you would like to suggest any courses, resources, or other additions to the L
 library(tidyverse)
 library(govdown)
 
-data <- read_csv("Courses/example courses3.csv")
+data <- read_csv("Copy of GORS LD Pages Course List Draft 2.csv")
 ```
 
 ::: {.accordion}
 ## General Analytical Skills
 
-Course reviews: 
 
 ```{r, results = 'asis', echo = FALSE}
 
 
-data_gen <- data %>% filter(category == "General Analytics") %>% filter(duplicated(course)==F)
+data_gen <- data %>% filter(Group == "General Analytical Skills") 
 for (i in 1:nrow(data_gen)){
-  cat(paste0(" \n**",data_gen[i,1],"** \n"))
-  cat(paste0(" \n* ",data_gen[i,5]," \n"))
-  cat(paste0(" \n* ",data_gen[i,6]," \n"))
-  cat(paste0(" \n* ","More info: ",data_gen[i,7]," \n"))
-cat(paste0(" \n","_________ "," \n"))
+  cat(paste0(" \n**",data_gen[i,1],"** "))
+   cat(paste0(" \n Type: ",data_gen[i,3]," "))
+   cat(paste0(" \n Source: ",data_gen[i,4]," "))
+    cat(paste0(" \n Time: ",data_gen[i,5]," "))
+  cat(if_else(data_gen[i,6]=="Free"|data_gen[i,6]=="N/A" ,paste0(" \n Cost: ",data_gen[i,6]," "), paste0(" \n Cost: £",data_gen[i,6]," ")))
+  cat(paste0(" \n Description: ",data_gen[i,8]," "))
+  cat(paste0(" \n Link: ",data_gen[i,7]," \n"))
+
+
 
 
 }
@@ -35,13 +38,15 @@ cat(paste0(" \n","_________ "," \n"))
 
 ## Programming/Data Science
 ```{r courses_prog , results = 'asis', echo = FALSE}
-data_spec <- data %>% filter(category == "Programming/Data Science") %>%filter(duplicated(course)==F)
+data_spec <- data %>% filter(Group == "Programming/Data Science") 
 for (i in 1:nrow(data_spec)){
-  cat(paste0(" \n**",data_spec[i,1],"** \n"))
-  cat(paste0(" \n* ",data_spec[i,5]," \n"))
-  cat(paste0(" \n* ",data_spec[i,6]," \n"))
-  cat(paste0(" \n* ","More info: ",data_spec[i,7]," \n"))
-cat(paste0(" \n","........."," \n"))
+    cat(paste0(" \n**",data_spec[i,1],"** "))
+   cat(paste0(" \n Type: ",data_spec[i,3]," "))
+   cat(paste0(" \n Source: ",data_spec[i,4]," "))
+    cat(paste0(" \n Time: ",data_spec[i,5]," "))
+  cat(if_else(data_spec[i,6]=="Free"|data_spec[i,6]=="N/A" ,paste0(" \n Cost: ",data_spec[i,6]," "), paste0(" \n Cost: £",data_spec[i,6]," ")))
+  cat(paste0(" \n Description: ",data_spec[i,8]," "))
+  cat(paste0(" \n Link: ",data_spec[i,7]," \n"))
 }
 
 
@@ -50,13 +55,15 @@ cat(paste0(" \n","........."," \n"))
 
 ## Hard OR
 ```{r courses_hard , results = 'asis', echo = FALSE}
-data_hard <- data %>% filter(category == "Hard OR") %>%filter(duplicated(course)==F)
+data_hard <- data %>% filter(Group == "Hard OR") 
 for (i in 1:nrow(data_hard)){
-  cat(paste0(" \n**",data_hard[i,1],"** \n"))
-  cat(paste0(" \n* ",data_hard[i,5]," \n"))
-  cat(paste0(" \n* ",data_hard[i,6]," \n"))
-  cat(paste0(" \n* ","More info: ",data_hard[i,7]," \n"))
-cat(paste0(" \n","........."," \n"))
+  cat(paste0(" \n**",data_hard[i,1],"** "))
+   cat(paste0(" \n Type: ",data_hard[i,3]," "))
+   cat(paste0(" \n Source: ",data_hard[i,4]," "))
+    cat(paste0(" \n Time: ",data_hard[i,5]," "))
+  cat(if_else(data_hard[i,6]=="Free"|data_hard[i,6]=="N/A" ,paste0(" \n Cost: ",data_hard[i,6]," "), paste0(" \n Cost: £",data_hard[i,6]," ")))
+  cat(paste0(" \n Description: ",data_hard[i,8]," "))
+  cat(paste0(" \n Link: ",data_hard[i,7]," \n"))
 }
 
 
@@ -66,13 +73,15 @@ cat(paste0(" \n","........."," \n"))
 ## Soft OR
 
 ```{r courses_soft , results = 'asis', echo = FALSE}
-data_soft <- data %>% filter(category == "Soft OR") %>%filter(duplicated(course)==F)
+data_soft <- data %>% filter(Group == "Soft OR") 
 for (i in 1:nrow(data_soft)){
-  cat(paste0(" \n**",data_soft[i,1],"** \n"))
-  cat(paste0(" \n* ",data_soft[i,5]," \n"))
-  cat(paste0(" \n* ",data_soft[i,6]," \n"))
-  cat(paste0(" \n* ","More info: ",data_soft[i,7]," \n"))
-cat(paste0(" \n","........."," \n"))
+    cat(paste0(" \n**",data_soft[i,1],"** "))
+   cat(paste0(" \n Type: ",data_soft[i,3]," "))
+   cat(paste0(" \n Source: ",data_soft[i,4]," "))
+    cat(paste0(" \n Time: ",data_soft[i,5]," "))
+  cat(if_else(data_soft[i,6]=="Free"|data_soft[i,6]=="N/A" ,paste0(" \n Cost: ",data_soft[i,6]," "), paste0(" \n Cost: £",data_soft[i,6]," ")))
+  cat(paste0(" \n Description: ",data_soft[i,8]," "))
+  cat(paste0(" \n Link: ",data_soft[i,7]," \n"))
 }
 
 ```
@@ -87,80 +96,58 @@ cat(paste0(" \n","........."," \n"))
 ## General Professional Skills
 
 ```{r courses_prof , results = 'asis', echo = FALSE}
-data_gen_prof <- data %>% filter(category == "General Professional") %>%filter(duplicated(course)==F)
+data_gen_prof <- data %>% filter(Group == "General Professional Skills") 
 for (i in 1:nrow(data_gen_prof)){
-  cat(paste0(" \n**",data_gen_prof[i,1],"** \n"))
-  cat(paste0(" \n* ",data_gen_prof[i,5]," \n"))
-  cat(paste0(" \n* ",data_gen_prof[i,6]," \n"))
-  cat(paste0(" \n* ","More info: ",data_gen_prof[i,7]," \n"))
-cat(paste0(" \n","........."," \n"))
+     cat(paste0(" \n**",data_gen_prof[i,1],"** "))
+   cat(paste0(" \n Type: ",data_gen_prof[i,3]," "))
+   cat(paste0(" \n Source: ",data_gen_prof[i,4]," "))
+    cat(paste0(" \n Time: ",data_gen_prof[i,5]," "))
+  cat(if_else(data_gen_prof[i,6]=="Free"|data_gen_prof[i,6]=="N/A"|data_gen_prof[i,6]=="See CSL" ,paste0(" \n Cost: ",data_gen_prof[i,6]," "), paste0(" \n Cost: £",data_gen_prof[i,6]," ")))
+  cat(paste0(" \n Description: ",data_gen_prof[i,8]," "))
+  cat(paste0(" \n Link: ",data_gen_prof[i,7]," \n"))
 }
 
 
 ```
 
-[**Influencing skills**](https://learn.civilservice.gov.uk/courses/IEttRlSBQg2c_KxG0Ygu6w) <br>
-**Type:** Blended <br>
-**Source:** Civil Service Learning <br>
-**Time:** 5 hours <br>
-**Price:** £229 (ex VAT) <br>
-**Description:**  Develop and shape your influencing style to affect your target group - their attitudes, beliefs and behaviours.
 
-[**Presenting confidently**](https://learn.civilservice.gov.uk/courses/ZtVOMjdqQd2ai4IXm-7H4A) <br>
-**Type:** Blended <br>
-**Source:** Civil Service Learning <br>
-**Time:** 3 hours <br>
-**Price:** £317 (ex VAT) <br>
-**Description:**  Learn the tools and techniques for delivering presentations more effectively and confidently.
+## OR Society
 
-[**Conducting high-quality conversations (online)**](https://learn.civilservice.gov.uk/courses/W21M5gwkQNuMLj-Cdb3h4w) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 54 minutes <br>
-**Price:** Free <br>
-**Description:**  Learn how to open a dialogue effectively and reach the desired constructive outcome.
+```{r courses_soc , results = 'asis', echo = FALSE}
+data_or_soc <- data %>% filter(Group == "OR Society") 
+for (i in 1:nrow(data_or_soc)){
+     cat(paste0(" \n**",data_or_soc[i,1],"** "))
+   cat(paste0(" \n Type: ",data_or_soc[i,3]," "))
+   cat(paste0(" \n Source: ",data_or_soc[i,4]," "))
+    cat(paste0(" \n Time: ",data_or_soc[i,5]," "))
+  cat(if_else(data_or_soc[i,6]=="Free"|data_or_soc[i,6]=="N/A" |data_or_soc[i,6]=="See OR Society" ,
+              paste0(" \n Cost: ",data_or_soc[i,6]," "), 
+              paste0(" \n Cost: £",data_or_soc[i,6]," ")))
+  cat(paste0(" \n Description: ",data_or_soc[i,8]," "))
+  cat(paste0(" \n Link: ",data_or_soc[i,7]," \n"))
+}
 
-[**Conducting high-quality conversations**](https://learn.civilservice.gov.uk/courses/pMQn9IGCQwuCbbeqzr8eWw) <br>
-**Type:** Blended <br>
-**Source:** Civil Service Learning <br>
-**Time:** 13 minutes <br>
-**Price:** £229 (ex VAT) <br>
-**Description:**  This topic helps you understand the emotional triggers that can change the tone of a conversation. During the workshop, you work through some real-life conversations and discover techniques to deal with different situations.
 
-[**Introduction to communicating effectively**](https://learn.civilservice.gov.uk/courses/fM6lUo61QImffsteAxhpaw) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 2 hours 50 minutes <br>
-**Price:** Free <br>
-**Description:**  Helps customer-facing staff understand the different ways you can communicate with customers and the benefits you gain by using these skills.
+```
 
-[**Introduction to communicating effectively (Blended)**](https://learn.civilservice.gov.uk/courses/pgyb3WeNTDq-kuEJT-vMLg) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 5 hours 35 minutes <br>
-**Price:** Free <br>
-**Description:**  This awareness-level topic gives you the basics that you need to know to start communicating effectively with your customers.
+## Other GORS Resources
 
-[**Assertiveness**](https://learn.civilservice.gov.uk/courses/G6YyDvaSSvKVVHDO6sprsQ) <br>
-**Type:** Blended <br>
-**Source:** Civil Service Learning <br>
-**Time:** 3 hours 50 minutes <br>
-**Price:** £243 (ex VAT) <br>
-**Description:**  This topic is designed to help you discover what assertive behaviour looks like and the skills you can develop to become more assertive.
+```{r courses_other , results = 'asis', echo = FALSE}
+data_other <- data %>% filter(Group == "Other GORS Resources") 
+for (i in 1:nrow(data_other)){
+   cat(paste0(" \n**",data_other[i,1],"** "))
+   cat(paste0(" \n Type: ",data_other[i,3]," "))
+   cat(paste0(" \n Source: ",data_other[i,4]," "))
+    cat(paste0(" \n Time: ",data_other[i,5]," "))
+  cat(if_else(data_other[i,6]=="Free"|data_other[i,6]=="N/A" |data_other[i,6]=="Refer to framework" ,
+              paste0(" \n Cost: ",data_other[i,6]," "), 
+              paste0(" \n Cost: £",data_other[i,6]," ")))
+  cat(paste0(" \n Description: ",data_other[i,8]," "))
+  cat(paste0(" \n Link: ",data_other[i,7]," \n"))
+}
 
-[**Assertiveness: further resources**](https://learn.civilservice.gov.uk/courses/Kp-5wlwXRp6TWOZWtgsMDA) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 1 hour <br>
-**Price:** Free <br>
-**Description:**  Freely available resources. Some departments may not allow access to external sites. Civil Service Learning is not responsible for content of external websites.
 
-[**Resilience and wellbeing (online)**](https://learn.civilservice.gov.uk/courses/YzIlqj79RkWUcRzpQriD4A) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 1 hour <br>
-**Price:** Free <br>
-**Description:**  Understand what resilience means in practice, how you can build it and how to maintain your wellbeing.
+```
 
 :::
 
