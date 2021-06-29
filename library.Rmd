@@ -13,7 +13,8 @@ data <- read_csv("Copy of GORS LD Pages Course List Draft 2.csv")
 
 ::: {.accordion}
 ## General Analytical Skills
-
+[Reviews for General analytical skills courses](https://airtable.com/tblfZYuZXnEwAaLUL/viwKooJuRO3mu1ti4?blocks=hide) 
+(need to improve this so only goes to specific courses, can change for each)
 
 ```{r, results = 'asis', echo = FALSE}
 
