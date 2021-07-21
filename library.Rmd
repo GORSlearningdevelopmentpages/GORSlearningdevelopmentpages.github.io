@@ -4,7 +4,7 @@ Welcome to the L&D Library. Here you can find a variety of recommended courses a
 
 Within each section you will also find a link to view the reviews provided by other operational researchers, this should hopefully help you decide which resources are right for you!
 
-If you would like to suggest any courses, resources, or other additions to the L&D Library please contact us: [SET UP EMAIL](). Our aim is to make this library as comprehensive and useful as possible.
+If you would like to suggest any courses, resources, or other additions to the L&D Library please contact us: [GORS-LD@justice.gov.uk](mailto:gors-ld@justice.gov.uk). Our aim is to make this library as comprehensive and useful as possible.
 
 ::: {.warning}
 If you utilised any of the resources below please [leave a review](https://airtable.com/shrDbLwOUCjoOi34D), all comments are anonymous and they help others to understand the usefulness of the resources linked below!

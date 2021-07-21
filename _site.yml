@@ -6,6 +6,8 @@ navbar:
     href: library.html
   - text: "FAQs"
     href: faq.html
+  - text: "Disclaimer"
+    href: disclaimer.html
 output:
   govdown::govdown_document:
     font: "sans-serif"
@@ -15,5 +17,5 @@ output:
     title: "GORS L&D Pages"
     phase: alpha
     feedback_url: "https://github.com/GORSlearningdevelopmentpages/GORSlearningdevelopmentpages.github.io/issues"
-    google_analytics: "UA-139844526-1"
+    google_analytics: "UA-192655531-1"
 exclude: ["node_modules", "DESCRIPTION", "inst", "install-govuk-frontend.sh", "LICENSE", "LICENSE.md", "LICENSE.html", "man", "NAMESPACE", "package.json", "R", ".Rbuildignore", "README.md", "README.html", "scss", "tags"]
