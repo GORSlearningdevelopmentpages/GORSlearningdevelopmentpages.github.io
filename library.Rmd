@@ -13,8 +13,7 @@ data <- read_csv("Copy of GORS LD Pages Course List Draft 2.csv")
 
 ::: {.accordion}
 ## General Analytical Skills
-[Reviews for General analytical skills courses](https://airtable.com/tblfZYuZXnEwAaLUL/viwKooJuRO3mu1ti4?blocks=hide) 
-(need to improve this so only goes to specific courses, can change for each)
+[Reviews: General Analytical Skills](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Analytical%20Skills) 
 
 ```{r, results = 'asis', echo = FALSE}
 
@@ -38,6 +37,8 @@ for (i in 1:nrow(data_gen)){
 
 
 ## Programming/Data Science
+[Reviews: Programming/Data Science](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Programming/Data%20Science) 
+
 ```{r courses_prog , results = 'asis', echo = FALSE}
 data_spec <- data %>% filter(Group == "Programming/Data Science") 
 for (i in 1:nrow(data_spec)){
@@ -55,6 +56,7 @@ for (i in 1:nrow(data_spec)){
 
 
 ## Hard OR
+[Reviews: Hard OR courses courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Hard%20OR) 
 ```{r courses_hard , results = 'asis', echo = FALSE}
 data_hard <- data %>% filter(Group == "Hard OR") 
 for (i in 1:nrow(data_hard)){
@@ -72,6 +74,7 @@ for (i in 1:nrow(data_hard)){
 
 
 ## Soft OR
+[Reviews: Soft OR courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Soft%20OR) 
 
 ```{r courses_soft , results = 'asis', echo = FALSE}
 data_soft <- data %>% filter(Group == "Soft OR") 
@@ -95,6 +98,7 @@ for (i in 1:nrow(data_soft)){
 **Description:**  Systems thinking is a problem-solving approach which explores the linkages and interactions between the people, perspectives and other factors present.
 
 ## General Professional Skills
+[Reviews: General Professional skills courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Professional%20Skills) 
 
 ```{r courses_prof , results = 'asis', echo = FALSE}
 data_gen_prof <- data %>% filter(Group == "General Professional Skills") 
@@ -113,6 +117,8 @@ for (i in 1:nrow(data_gen_prof)){
 
 
 ## OR Society
+[Reviews: OR Society courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=OR%20Society) 
+
 
 ```{r courses_soc , results = 'asis', echo = FALSE}
 data_or_soc <- data %>% filter(Group == "OR Society") 
@@ -132,7 +138,7 @@ for (i in 1:nrow(data_or_soc)){
 ```
 
 ## Other GORS Resources
-
+[Reviews: other GORS Resources](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources) 
 ```{r courses_other , results = 'asis', echo = FALSE}
 data_other <- data %>% filter(Group == "Other GORS Resources") 
 for (i in 1:nrow(data_other)){
