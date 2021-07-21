@@ -3,7 +3,7 @@
 If you believe any of the information presented below is incorrect, please get in touch here: [GORS-LD@justice.gov.uk](mailto:gors-ld@justice.gov.uk)
 
 ### Q: How can I book an external or Civil Service Learning Course?
-**A:** See our document on how to book an external course: [GORS Guide to booking an external courses](files/GORS Guide to booking an external course v2.0.pptx)
+**A:** See our document on how to book an external course: [GORS Guide to booking an external courses - ADD LINK]()
 
 ### Q: How much L&D time am I entitled to?
 **A:** There are a few important numbers to keep in mind.
@@ -15,7 +15,7 @@ If you believe any of the information presented below is incorrect, please get i
 Don't forget that learning on the job also counts as development (and can be included towards the required 100 hours for GORS).
 
 ### Q: How should I log my 100 hours of CPD for GORS?
-**A:** The following template is endorsed by GORS CMU: [GORS CPD Log](files/GORS_CPD_Log.xlsm).
+**A:** The following guide and log template (see annex of linked guide) is endorsed by GORS CMU: [GORS CPD Log](http://www.operational-research.gov.uk/members/library/download/846/).
  
 To note, from April 2020 it will become mandatory for the CPD log to be signed off by another OR.
 
