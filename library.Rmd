@@ -90,12 +90,6 @@ for (i in 1:nrow(data_soft)){
 
 ```
 
-[**Systems and complexity**](https://learn.civilservice.gov.uk/courses/btroxfDbQjWETY76YgxRdw) <br>
-**Type:** Online <br>
-**Source:** Civil Service Learning <br>
-**Time:** 3 hours <br>
-**Price:** Free <br>
-**Description:**  Systems thinking is a problem-solving approach which explores the linkages and interactions between the people, perspectives and other factors present.
 
 ## General Professional Skills
 [Reviews: General Professional skills courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Professional%20Skills) 
@@ -161,8 +155,6 @@ for (i in 1:nrow(data_other)){
 ---
 
 ::: {.small-para}
-This site was built using
-
-[govdown](https://ukgovdatascience.github.io/govdown/).
+This site was built using [govdown](https://ukgovdatascience.github.io/govdown/).
 
 :::
