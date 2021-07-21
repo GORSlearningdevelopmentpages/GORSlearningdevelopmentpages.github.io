@@ -132,7 +132,7 @@ for (i in 1:nrow(data_or_soc)){
 ```
 
 ## Other GORS Resources
-[Reviews: other GORS Resources](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources) 
+[Reviews: Other GORS Resources](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources) 
 ```{r courses_other , results = 'asis', echo = FALSE}
 data_other <- data %>% filter(Group == "Other GORS Resources") 
 for (i in 1:nrow(data_other)){
