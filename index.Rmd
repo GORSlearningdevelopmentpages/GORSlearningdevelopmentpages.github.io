@@ -34,5 +34,5 @@ If you have any suggestions for these pages, questions about L&D, would like to 
 ---
 
 ::: {.small-para}
-This site was built using [govdown](https://ukgovdatascience.github.io/govdown/).
+This site was built using [govdown](https://ukgovdatascience.github.io/govdown/){target="_blank"}.
 :::
