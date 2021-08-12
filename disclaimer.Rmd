@@ -14,5 +14,5 @@ The information presented on this website is classified as OFFICIAL according to
 ---
 
 ::: {.small-para}
-This site was built using [govdown](https://ukgovdatascience.github.io/govdown/).
+This site was built using [govdown](https://ukgovdatascience.github.io/govdown/){target="_blank"}.
 :::
