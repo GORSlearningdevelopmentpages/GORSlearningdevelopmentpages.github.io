@@ -4056,6 +4056,19 @@ padding-top: 10px; } }
 <script src="/html5-shiv/html5shiv.js"></script>
 <![endif]-->
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -4163,16 +4176,20 @@ This is new – your
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper " id="main-content" role="main">
-<h1 id="ld-library" class="govuk-heading-xl">L&amp;D Library</h1>
+<h1 class="govuk-heading-xl" id="ld-library">L&amp;D Library</h1>
 <p class="govuk-body">
 Welcome to the L&amp;D Library. Here you can find a variety of recommended courses and feedback from your peers. Courses are listed by subject, which can be expanded on by using the plus buttons. If you are looking for a specific course, please click “Open all” and use Ctrl + F to search for it.
 </p>
 <p class="govuk-body">
-If you would like to suggest any courses, resources, or other additions to the L&amp;D Library please contact us: <a href class="govuk-link">SET UP EMAIL</a>. Our aim is to make this library as comprehensive and useful as possible.
+Within each section you will also find a link to view the reviews provided by other operational researchers, this should hopefully help you decide which resources are right for you!
 </p>
 <p class="govuk-body">
-Also, if you would like to explore the official guidance on quality assurance and producing quality analysis for government, please refer to the <a href="https://www.gov.uk/government/publications/the-aqua-book-guidance-on-producing-quality-analysis-for-government" class="govuk-link">Aqua Book</a>. The Aqua Book is one of the products developed by the cross-departmental working group on analytical quality assurance and is a good practice guide to those working with analysis and analytical models.
+If you would like to suggest any courses, resources, or other additions to the L&amp;D Library please contact us: <a href="mailto:gors-ld@justice.gov.uk" class="govuk-link">GORS-LD@justice.gov.uk</a>. Our aim is to make this library as comprehensive and useful as possible.
 </p>
+<div class="govuk-warning-text"><span class="govuk-warning-text__icon" aria-hidden="true">!</span><strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
+If you utilised any of the resources below please <a href="https://airtable.com/shrDbLwOUCjoOi34D" class="govuk-link">leave a review</a>, all comments are anonymous and they help others to understand the usefulness of the resources linked below!
+</strong>
+</div>
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-1">
 <div class="govuk-accordion__section">
 <div class="govuk-accordion__section-header">
@@ -4184,16 +4201,61 @@ General Analytical Skills
 </div>
 <div id="accordion-1-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-1">
 <p class="govuk-body">
-Template <br> <a href class="govuk-link">****</a> <br> <span class="govuk-!-font-weight-bold">Type:</span> <br> <span class="govuk-!-font-weight-bold">Source:</span> <br> <span class="govuk-!-font-weight-bold">Time:</span> <br> <span class="govuk-!-font-weight-bold">Price:</span> <br> <span class="govuk-!-font-weight-bold">Description:</span>
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Analytical%20Skills" class="govuk-link">Reviews: General Analytical Skills</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/PHP-Qf-ZS2CClCfkGDXLGQ" class="govuk-link"><span class="govuk-!-font-weight-bold">Excel: foundation</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 7 days <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Provides help if you’re new to working with spreadsheets and want to improve your basic skills.
+<span class="govuk-!-font-weight-bold">Fundamentals of Data Visualization</span><br />
+Type: Online (book)<br />
+Source: Claus O. Wilke<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: The book is meant as a guide to making visualisations that accurately reflect the data, tell a story, and look professional.<br />
+Link: <a href="https://clauswilke.com/dataviz/" class="uri govuk-link">https://clauswilke.com/dataviz/</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/CmVXrBiFRzO7L_566Ov_Tg" class="govuk-link"><span class="govuk-!-font-weight-bold">Excel: intermediate</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Face to face <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 7 hours <br> <span class="govuk-!-font-weight-bold">Price:</span> £299 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> Take your Excel skills to the next level by attending this workshop.
+<span class="govuk-!-font-weight-bold">Bad data guide</span><br />
+Type: Online<br />
+Source: Quartz<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: An exhaustive reference to problems seen in real-world data along with suggestions on how to resolve them.<br />
+Link: <a href="https://github.com/Quartz/bad-data-guide" class="uri govuk-link">https://github.com/Quartz/bad-data-guide</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/Puj-BFZ_QHaqshcEtD_UpQ" class="govuk-link"><span class="govuk-!-font-weight-bold">Excel: advanced</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Face to face <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 7 hours <br> <span class="govuk-!-font-weight-bold">Price:</span> £472 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> Explore the advanced features and benefits of Excel and learn how to use them effectively.
+<span class="govuk-!-font-weight-bold">Preparing for Grade 7 in the Government Analytical Service: Maximising your effectiveness and impact</span><br />
+Type: Face to face<br />
+Source: LSR Training<br />
+Time: 4 days<br />
+Cost: £890<br />
+Description: This course is for experienced Operational Researchers who are responsible for managing staff and starting to have a representation role for in the Analytical Service. The aim of this course is to equip participants with many of the key skills needed to perform effectively at this level in the government analytical service.<br />
+Link: <a href="https://www.lsr-training.co.uk/analytical-leadership-management/preparing-for-grade-7-in-the-government-analytical-service-maximising-your-effectiveness-and-impact" class="uri govuk-link">https://www.lsr-training.co.uk/analytical-leadership-management/preparing-for-grade-7-in-the-government-analytical-service-maximising-your-effectiveness-and-impact</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Show me the Numbers</span><br />
+Type: Book<br />
+Source: Stephen Few<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Tables and graphs can more adequately communicate important business information when they reflect the good design practices discussed in this practical guide to effective table and graph design. Information is provided on the fundamental concepts of table and graph design, the numbers and knowledge most suitable for display in a graphic form, the best tabular means to communicate certain ideas, and the component-level aspects of design.<br />
+Link: <a href="https://www.goodreads.com/book/show/543936.Show_Me_the_Numbers" class="uri govuk-link">https://www.goodreads.com/book/show/543936.Show_Me_the_Numbers</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Storytelling with Data: A Data Visualization Guide for Business</span><br />
+Type: Book<br />
+Source: Cole Nussbaumer Knaflic<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Don’t simply show your data–tell a story with it! Storytelling with Data teaches you the fundamentals of data visualisation and how to communicate effectively with data.<br />
+Link: <a href="https://www.goodreads.com/book/show/26535513-storytelling-with-data" class="uri govuk-link">https://www.goodreads.com/book/show/26535513-storytelling-with-data</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Effective Analytical Leadership</span><br />
+Type: Face to face<br />
+Source: RSS<br />
+Time: 2 days<br />
+Cost: £See RSS<br />
+Description: To meet the needs of the modern global business agenda, analytical leaders need to perform a complex role. This course explores the required range of knowledge, skills and behaviours to meet this new agenda.<br />
+Link: <a href="https://rss.org.uk/training-events/training/public-courses/professional-development/effective-analytical-leadership/" class="uri govuk-link">https://rss.org.uk/training-events/training/public-courses/professional-development/effective-analytical-leadership/</a>
 </p>
 </div></div>
 <div class="govuk-accordion__section">
@@ -4205,6 +4267,128 @@ Programming/Data Science
 </h2>
 </div>
 <div id="accordion-1-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-2">
+<p class="govuk-body">
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Programming/Data%20Science" class="govuk-link">Reviews: Programming/Data Science</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">R for Data Science</span><br />
+Type: Online (book)<br />
+Source: Hadley Wickham<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: This book will teach you how to do data science with R: You’ll learn how to get your data into R, get it into the most useful structure, transform it, visualise it and model it. In this book, you will find a practicum of skills for data science.<br />
+Link: <a href="http://r4ds.had.co.nz/" class="uri govuk-link">http://r4ds.had.co.nz/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Text Mining with R: A Tidy Approach</span><br />
+Type: Online (book)<br />
+Source: Julia Silge and David Robinson<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: This book serves as an introduction of text mining using the tidytext package and other tidy tools in R. The functions provided by the tidytext package are relatively simple; what is important are the possible applications. Thus, this book provides compelling examples of real text mining problems.<br />
+Link: <a href="https://www.tidytextmining.com/" class="uri govuk-link">https://www.tidytextmining.com/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Mastering Shiny</span><br />
+Type: Online (book)<br />
+Source: Hadley Wickham<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: This book is designed to take you from knowing nothing about Shiny to being an expert developer who can write large complex apps that are still maintainable and performant. You’ll gain a deep understanding of the reactive programming model that underlies Shiny, as well as building a tool box of useful techniques to solve common app challenges.
+</p>
+<p class="govuk-body">
+Link: <a href="https://mastering-shiny.org/" class="uri govuk-link">https://mastering-shiny.org/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Hands-On Machine Learning with R</span><br />
+Type: Online (book)<br />
+Source: Bradley Boehmke and Brandon Greenwell<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: This book provides hands-on modules for many of the most common machine learning methods. You will learn how to build and tune various models with R packages that have been tested and approved due to their ability to scale well.<br />
+Link: <a href="https://bradleyboehmke.github.io/HOML/" class="uri govuk-link">https://bradleyboehmke.github.io/HOML/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Python for analysts</span><br />
+Type: Online<br />
+Source: Tom Ewing (Tommo565)<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: The author wrote this a couple of years ago when they first starting out with Python and thier career as a data scientist. They had come from a background of SAS and Excel bu discovered how easy, intuitive and powerful Python was for data analaysis and data science and wanted to create thier own training course to both share the awesomeness of Python with others, and also as a means to document and share their learning.<br />
+Link: <a href="https://github.com/Tommo565/python-for-analysts" class="uri govuk-link">https://github.com/Tommo565/python-for-analysts</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Introduction To Python Programming</span><br />
+Type: Online<br />
+Source: Avinash Jain, The Codex<br />
+Time: 1.5 hours<br />
+Cost: Free<br />
+Description: This course is a one-stop-shop for everything you’ll need to know to get started with Python, along with a few incentives. We’ll begin with the basics of Python, learning about strings, variables, and getting to know the data types. We’ll soon move on to the loops and conditions in Python. Afterwards, we’ll discuss a bit of file manipulation and functions. By then, you’ll know all the basics of Python.<br />
+Link: <a href="https://www.udemy.com/course/pythonforbeginnersintro/?LSNPUBID=JVFxdTr9V80&amp;ranEAID=JVFxdTr9V80&amp;ranMID=39197&amp;ranSiteID=JVFxdTr9V80-uu8owEoJwWMbF5_k7IDR_Q" class="uri govuk-link">https://www.udemy.com/course/pythonforbeginnersintro/?LSNPUBID=JVFxdTr9V80&amp;ranEAID=JVFxdTr9V80&amp;ranMID=39197&amp;ranSiteID=JVFxdTr9V80-uu8owEoJwWMbF5_k7IDR_Q</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Python Data Science Handbook</span><br />
+Type: Online (book)<br />
+Source: Jake VanderPlas<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: For many researchers, Python is a first-class tool mainly because of its libraries for storing, manipulating, and gaining insight from data. Several resources exist for individual pieces of this data science stack, but only with the Python Data Science Handbook do you get them all—IPython, NumPy, Pandas, Matplotlib, Scikit-Learn, and other related tools.<br />
+Link: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/" class="uri govuk-link">https://jakevdp.github.io/PythonDataScienceHandbook/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Think Stats: Probability and Statistics for Programmers</span><br />
+Type: Online (book)<br />
+Source: Allen B. Downey<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: If you know how to program, you have the skills to turn data into knowledge, using tools of probability and statistics. This concise introduction shows you how to perform statistical analysis computationally, rather than mathematically, with programs written in Python.<br />
+Link: <a href="https://greenteapress.com/thinkstats/html/index.html" class="uri govuk-link">https://greenteapress.com/thinkstats/html/index.html</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Think Bayes: Bayesian Statistics Made Simple</span><br />
+Type: Online (book)<br />
+Source: Allen B. Downey<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: If you know how to program with Python and also know a little about probability, you’re ready to tackle Bayesian statistics. With this book, you’ll learn how to solve statistical problems with Python code instead of mathematical notation, and use discrete probability distributions instead of continuous mathematics. Once you get the math out of the way, the Bayesian fundamentals will become clearer, and you’ll begin to apply these techniques to real-world problems.<br />
+Link: <a href="https://greenteapress.com/thinkbayes/html/index.html" class="uri govuk-link">https://greenteapress.com/thinkbayes/html/index.html</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">An Introduction to Statistical Learning with Applications in R</span><br />
+Type: Online (book)<br />
+Source: Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: As the scale and scope of data collection continue to increase across virtually all fields, statistical learning has become a critical toolkit for anyone who wishes to understand data. An Introduction to Statistical Learning provides a broad and less technical treatment of key topics in statistical learning. Each chapter includes an R lab. This book is appropriate for anyone who wishes to use contemporary tools for data analysis.<br />
+Link: <a href="https://www.statlearning.com/" class="uri govuk-link">https://www.statlearning.com/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">SQL Tutorial</span><br />
+Type: Online<br />
+Source: w3schools<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: W3Schools create simplified and interactive learning experiences. Learning web development should be easy to understand and available for everyone, everywhere! W3Schools is a school for web developers, covering all the aspects of web development.<br />
+Link: <a href="https://www.w3schools.com/sql/" class="uri govuk-link">https://www.w3schools.com/sql/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Natural Language Processing – Stanford University</span><br />
+Type: Online<br />
+Source: Dan Jurafsky<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: A thorough introduction to the theory underpinning natural language processing tasks. A good basis for more specialised applications. Note: more recent courses from Stanford are now also available on Youtube.<br />
+Link: <a href="https://www.youtube.com/playlist?list=PLLssT5z_DsK8HbD2sPcUIDfQ7zmBarMYv" class="uri govuk-link">https://www.youtube.com/playlist?list=PLLssT5z_DsK8HbD2sPcUIDfQ7zmBarMYv</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Geocomputation with R</span><br />
+Type: Online (book)<br />
+Source: Robin Lovelace, Jakub Nowosad, Jannes Muenchow<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: This book is for people who want to analyze, visualize and model geographic data with open source software. It is based on R, a statistical programming language that has powerful data processing, visualization and geospatial capabilities.<br />
+Link: <a href="https://geocompr.robinlovelace.net/" class="uri govuk-link">https://geocompr.robinlovelace.net/</a>
+</p>
 </div></div>
 <div class="govuk-accordion__section">
 <div class="govuk-accordion__section-header">
@@ -4215,6 +4399,36 @@ Hard OR
 </h2>
 </div>
 <div id="accordion-1-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-3">
+<p class="govuk-body">
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Hard%20OR" class="govuk-link">Reviews: Hard OR courses courses</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">OR Introductory Notes</span><br />
+Type: Online<br />
+Source: Professor J E Beasley<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: OR-Notes are a series of introductory notes on topics that fall under the broad heading of the field of operations research (OR). They were originally used by the author in an introductory OR course they gave at Imperial College.<br />
+Link: <a href="http://people.brunel.ac.uk/~mastjjb/jeb/or/contents.html" class="uri govuk-link">http://people.brunel.ac.uk/~mastjjb/jeb/or/contents.html</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 2 (Intermediate): Linear Programming – The Basic Ideas</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 16 hours<br />
+Cost: Free<br />
+Description: This free course examines the formulation and solution of small linear programming problems. Section 1 deals with the formulation of linear programming models, describing how mathematical models of suitable real-world problems can be constructed. Section 2 looks at graphical representations of two-dimensional models, considers some theoretical implications and examines the graphical solution of such models. Section 3 introduces the simplex method for solving linear programming models and Section 4 uses matrix notation to formalize the simplex method.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/linear-programming-the-basic-ideas/content-section-0?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/linear-programming-the-basic-ideas/content-section-0?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Risk Analysis: A Quantitative Guide</span><br />
+Type: Book<br />
+Source: David Vose<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Risk Analysis concerns itself with the quantification of risk, the modeling of identified risks and how to make decisions from those models. Quantitative risk analysis (QRA) using Monte Carlo simulation offers a powerful and precise method for dealing with the uncertainty and variability of a problem. By providing the building blocks the author guides the reader through the necessary steps to produce an accurate risk analysis model and offers general and specific techniques to cope with most modeling problems.<br />
+Link: <a href="https://books.google.co.uk/books/about/Risk_Analysis.html?id=9CaoAqaRcVwC&amp;redir_esc=y" class="uri govuk-link">https://books.google.co.uk/books/about/Risk_Analysis.html?id=9CaoAqaRcVwC&amp;redir_esc=y</a>
+</p>
 </div></div>
 <div class="govuk-accordion__section">
 <div class="govuk-accordion__section-header">
@@ -4226,7 +4440,99 @@ Soft OR
 </div>
 <div id="accordion-1-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-4">
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/btroxfDbQjWETY76YgxRdw" class="govuk-link"><span class="govuk-!-font-weight-bold">Systems and complexity</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 3 hours <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Systems thinking is a problem-solving approach which explores the linkages and interactions between the people, perspectives and other factors present.
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Soft%20OR" class="govuk-link">Reviews: Soft OR courses</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Systems and complexity</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 3 hours<br />
+Cost: Free<br />
+Description: This topic is also suitable for anyone looking to improve the clarity of their thinking around complex issues.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/btroxfDbQjWETY76YgxRdw" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/btroxfDbQjWETY76YgxRdw</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 1 (Introductory): Systems Modelling</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 4 hours<br />
+Cost: Free<br />
+Description: Maps and plans, architects and engineers, drawings, graphs and tables: all are models we use in everyday life. This free course, Systems modelling, will introduce you to the modelling process, enabling you to recognise that systems models may be used in different ways as part of a process for: improving understanding of a situation; identifying problems or formulating opportunities and supporting decision making.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/computing-ict/systems-modelling/content-section-0?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/computing-ict/systems-modelling/content-section-0?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 2 (Intermediate): Systems Thinking and Practice</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 8 hours<br />
+Cost: Free<br />
+Description: What is systems thinking and practice? The essence of systems thinking and practice is in ‘seeing’ the world in a particular way, because how you ‘see’ things affects the way you approach situations or undertake specific tasks. This free course will help you to learn about the problems of defining a system and meet some of the key concepts used in systems theory: boundary, environment, positive and negative feedback, etc.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/computing-ict/systems-thinking-and-practice/content-section-0?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/computing-ict/systems-thinking-and-practice/content-section-0?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 3 (Advanced): Managing Complexity – A Systems Approach Introduction</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 20 hours<br />
+Cost: Free<br />
+Description: Do you need to change the way you think when faced with a complex situation? Managing Complexity: A Systems Approach, is a free course that examines how systemic thinking and practice enables you to cope with the connections between things, events and ideas. By taking a broader perspective complexity becomes manageable and it is easier to accept that gaps in knowledge can be acceptable.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/computing-and-ict/systems-computer/managing-complexity-systems-approach/content-section-0?active-tab=description-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/computing-and-ict/systems-computer/managing-complexity-systems-approach/content-section-0?active-tab=description-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 3 (Advanced): Strategic Planning – Systems Thinking in Practice</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 20 hours<br />
+Cost: Free<br />
+Description: Strategic planning: systems thinking in practice is a free, two-part course introducing core ideas of systems thinking in practice for managing and improving complex situations. The ideas correspond with three core activities of, firstly, understanding inter-relationships, secondly, engaging with multiple perspectives, and thirdly, reflecting on boundary judgements.
+</p>
+<p class="govuk-body">
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/strategic-planning-systems-thinking-practice/content-section-overview?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/strategic-planning-systems-thinking-practice/content-section-overview?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 3 (Advanced): Mastering Systems Thinking in Practice</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 24 hours<br />
+Cost: Free<br />
+Description: Do you want to develop new ways of thinking about and approaching situations that cross multiple discipline and skills boundaries? Do you want to learn to think more holistically about complex and messy situations, understand the roles other people play, taking account of the interconnectedness of all the components making up the problem situations and working more collaboratively? If so, then this free badged course, Mastering systems thinking in practice, is for you.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/mastering-systems-thinking-practice/content-section-overview?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/mastering-systems-thinking-practice/content-section-overview?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 3 (Advanced): Diagramming for Development 1 - Bounding Realities</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 4 hours<br />
+Cost: Free<br />
+Description: Diagramming for development 1 - Bounding realities, is a free course that introduces you to the systems diagramming techniques of Rich pictures, Spray diagrams and Systems maps. Using a case study project based in Africa, the course illustrates the use of powerful use of systems diagramming for international development management. This is a companion course to Diagramming for development 2: exploring inter-relationships.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/computing-ict/diagramming-development-1-bounding-realities/content-section-0?active-tab=content-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/computing-ict/diagramming-development-1-bounding-realities/content-section-0?active-tab=content-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Level 3 (Advanced): Diagramming for Development 2 - Exploring Interrelationships</span><br />
+Type: Online<br />
+Source: OpenLearn<br />
+Time: 4 hours<br />
+Cost: Free<br />
+Description: Diagramming for development 2 - Exploring interrelationships, is a free course that introduces you to the diagramming techniques of Influence diagrams, Multiple Cause Diagrams and Cognitive Maps. Using a case study project based in Africa, this unit illustrates the powerful use of systems diagramming for international development management. This is a companion course to Diagramming for development 1: bounding realities.<br />
+Link: <a href="https://www.open.edu/openlearn/science-maths-technology/computing-ict/diagramming-development-2-exploring-interrelationships/content-section-0?active-tab=description-tab" class="uri govuk-link">https://www.open.edu/openlearn/science-maths-technology/computing-ict/diagramming-development-2-exploring-interrelationships/content-section-0?active-tab=description-tab</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">The Fifth Discipline</span><br />
+Type: Book<br />
+Source: Peter M. Senge<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This is a book focusing on group problem solving using the systems thinking method in order to convert companies into learning organizations. The five disciplines represent approaches (theories and methods) for developing three core learning capabilities: fostering aspiration, developing reflective conversation, and understanding complexity.<br />
+Link: <a href="https://www.goodreads.com/book/show/255127.The_Fifth_Discipline" class="uri govuk-link">https://www.goodreads.com/book/show/255127.The_Fifth_Discipline</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Business Dynamics: Systems Thinking and Modeling for a Complex World</span><br />
+Type: Book<br />
+Source: John D. Sterman<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: A clear and detailed course for developing Systems Dyamics models and systems thinking. Contains insightful real-world examples and applications. Long but worth it for someone looking to become a practitioner.<br />
+Link: <a href="https://www.amazon.co.uk/Business-Dynamics-Systems-Thinking-Modeling/dp/0071179895" class="uri govuk-link">https://www.amazon.co.uk/Business-Dynamics-Systems-Thinking-Modeling/dp/0071179895</a>
 </p>
 </div></div>
 <div class="govuk-accordion__section">
@@ -4239,31 +4545,449 @@ General Professional Skills
 </div>
 <div id="accordion-1-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-5">
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/IEttRlSBQg2c_KxG0Ygu6w" class="govuk-link"><span class="govuk-!-font-weight-bold">Influencing skills</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Blended <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 5 hours <br> <span class="govuk-!-font-weight-bold">Price:</span> £229 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> Develop and shape your influencing style to affect your target group - their attitudes, beliefs and behaviours.
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Professional%20Skills" class="govuk-link">Reviews: General Professional skills courses</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/ZtVOMjdqQd2ai4IXm-7H4A" class="govuk-link"><span class="govuk-!-font-weight-bold">Presenting confidently</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Blended <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 3 hours <br> <span class="govuk-!-font-weight-bold">Price:</span> £317 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> Learn the tools and techniques for delivering presentations more effectively and confidently.
+<span class="govuk-!-font-weight-bold">Unconsious bias</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 45 minutes<br />
+Cost: Free<br />
+Description: This topic introduces you to techniques for challenging, preventing and removing issues of unconscious bias in the workplace. It helps you to develop strategies for overcoming your own bias and that of your colleagues.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/akG9Na6_QW6A9hovVW95kg" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/akG9Na6_QW6A9hovVW95kg</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/W21M5gwkQNuMLj-Cdb3h4w" class="govuk-link"><span class="govuk-!-font-weight-bold">Conducting high-quality conversations (online)</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 54 minutes <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Learn how to open a dialogue effectively and reach the desired constructive outcome.
+<span class="govuk-!-font-weight-bold">Leading in ambiguity</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 7 hours<br />
+Cost: See CSL<br />
+Description: You learn how to manage the tensions in your role that are created by ambiguity, paying particular attention to the importance of personal resilience.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/kw1rRpnFS8SgNon8b30pwg" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/kw1rRpnFS8SgNon8b30pwg</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/pMQn9IGCQwuCbbeqzr8eWw" class="govuk-link"><span class="govuk-!-font-weight-bold">Conducting high-quality conversations</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Blended <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 13 minutes <br> <span class="govuk-!-font-weight-bold">Price:</span> £229 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> This topic helps you understand the emotional triggers that can change the tone of a conversation. During the workshop, you work through some real-life conversations and discover techniques to deal with different situations.
+<span class="govuk-!-font-weight-bold">Emotional intelligence</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 1.5 hours<br />
+Cost: Free<br />
+Description: In a work environment, being able to fuse together intelligence, empathy and emotion can be a powerful tool. This topic demonstrates how you can harness your emotional intelligence to increase your capability for leadership and relationship building.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/TqjvUs-zQYys2EiXYqj31Q" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/TqjvUs-zQYys2EiXYqj31Q</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/fM6lUo61QImffsteAxhpaw" class="govuk-link"><span class="govuk-!-font-weight-bold">Introduction to communicating effectively</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 2 hours 50 minutes <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Helps customer-facing staff understand the different ways you can communicate with customers and the benefits you gain by using these skills.
+<span class="govuk-!-font-weight-bold">Presenting confidently</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 3.5 hours<br />
+Cost: See CSL<br />
+Description: This workshop gives you the opportunity to prepare a presentation, deliver it and, with feedback, improve upon it. Having to give a presentation at work is something many people find uncomfortable. But confidently and articulately delivered presentations are an important tool in being able to communicate effectively.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/ZtVOMjdqQd2ai4IXm-7H4A" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/ZtVOMjdqQd2ai4IXm-7H4A</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/pgyb3WeNTDq-kuEJT-vMLg" class="govuk-link"><span class="govuk-!-font-weight-bold">Introduction to communicating effectively (Blended)</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 5 hours 35 minutes <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> This awareness-level topic gives you the basics that you need to know to start communicating effectively with your customers.
+<span class="govuk-!-font-weight-bold">Conducting high quality conversations</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 4 hours<br />
+Cost: See CSL<br />
+Description: This topic helps you understand the emotional triggers that can change the tone of a conversation. Conversations that focus on giving feedback, discussing personal issues or addressing inappropriate behaviour all have the potential to take a turn for the worse. At the workshop, you work through some real-life conversations and discover techniques to deal with different situations.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/lugd16coQzqXAfog_lYBYg" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/lugd16coQzqXAfog_lYBYg</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/G6YyDvaSSvKVVHDO6sprsQ" class="govuk-link"><span class="govuk-!-font-weight-bold">Assertiveness</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Blended <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 3 hours 50 minutes <br> <span class="govuk-!-font-weight-bold">Price:</span> £243 (ex VAT) <br> <span class="govuk-!-font-weight-bold">Description:</span> This topic is designed to help you discover what assertive behaviour looks like and the skills you can develop to become more assertive.
+<span class="govuk-!-font-weight-bold">Management fundamentals</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 3 months<br />
+Cost: Free<br />
+Description: Gain fresh insight into providing goals, direction, feedback and coaching. Whether a new or experienced manager, this learning will help you with managing diverse teams, leading change, communicating effectively and managing projects and risk.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/BsHMHYhTRV6L3-zXFy3xNA" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/BsHMHYhTRV6L3-zXFy3xNA</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/Kp-5wlwXRp6TWOZWtgsMDA" class="govuk-link"><span class="govuk-!-font-weight-bold">Assertiveness: further resources</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 1 hour <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Freely available resources. Some departments may not allow access to external sites. Civil Service Learning is not responsible for content of external websites.
+<span class="govuk-!-font-weight-bold">Stepping into leadership</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 6 days<br />
+Cost: See CSL<br />
+Description: This programme has been developed for managers taking on broader leadership roles, starting to manage larger teams or leading across teams or departments.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/5aGTYkrJQSOGIU3SYUAiyQ" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/5aGTYkrJQSOGIU3SYUAiyQ</a>
 </p>
 <p class="govuk-body">
-<a href="https://learn.civilservice.gov.uk/courses/YzIlqj79RkWUcRzpQriD4A" class="govuk-link"><span class="govuk-!-font-weight-bold">Resilience and wellbeing (online)</span></a> <br> <span class="govuk-!-font-weight-bold">Type:</span> Online <br> <span class="govuk-!-font-weight-bold">Source:</span> Civil Service Learning <br> <span class="govuk-!-font-weight-bold">Time:</span> 1 hour <br> <span class="govuk-!-font-weight-bold">Price:</span> Free <br> <span class="govuk-!-font-weight-bold">Description:</span> Understand what resilience means in practice, how you can build it and how to maintain your wellbeing.
+<span class="govuk-!-font-weight-bold">Building effective teams</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 4 hours<br />
+Cost: See CSL<br />
+Description: You’ll investigate the barriers that typically prevent teams from performing effectively – and how to get past them. As a manager, it’s part of your job to create an environment that helps bring the best out of your team.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/2MX1rYSATISZP0wyc68YOA" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/2MX1rYSATISZP0wyc68YOA</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Project planning</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 2.5 hours<br />
+Cost: Free<br />
+Description: The topic describes the tools available to help you create an effective plan and takes you through the most important considerations of the planning process. These include giving planning the time it deserves, learning from previous projects, fully involving the appropriate stakeholders and building in sufficient flexibility.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/Jj2DmhJoSqqtB7E6LM4w4g" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/Jj2DmhJoSqqtB7E6LM4w4g</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Planning and implementing change</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 2 hours<br />
+Cost: Free<br />
+Description: This digital topic will guide you through your analysis of the change you will deliver. You will examine the cultural context of the organisation and the roles of your stakeholders, helping you develop a well rounded implementation plan.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/NSsk9vvwTh-u5kWkzncgxA" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/NSsk9vvwTh-u5kWkzncgxA</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Commerical awareness</span><br />
+Type: Online<br />
+Source: Civil Service Learning<br />
+Time: 2.5 hours<br />
+Cost: Free<br />
+Description: This topic explains the benefits of commercial understanding when you’re developing and implementing policy and programmes. You learn about the importance of effective preparation, procurement and management of services, as well as the stages of the commercial cycle. It also covers the role and importance of commercial professionals.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/e0HNfmkTSMiRPHVJ9ljnxA" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/e0HNfmkTSMiRPHVJ9ljnxA</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Advising, briefing and drafting</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 7 hours<br />
+Cost: See CSL<br />
+Description: This topic will include writing briefings, submissions, ministerial correspondence, writing for different audiences and drafting ‘lines to take’. You’ll also learn how to present an argument even-handedly and with impact so leaders can make timely and well informed decisions.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/IzgvbpXRQ8-YCuopbp6nUQ" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/IzgvbpXRQ8-YCuopbp6nUQ</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Understanding and using business cases</span><br />
+Type: Face to face<br />
+Source: Civil Service Learning<br />
+Time: 3.5 hours<br />
+Cost: See CSL<br />
+Description: This topic is for anyone who wants to better understand the impact of business cases and how they are developed. You are shown best practice and what needs to be included in a business case to make it more successful. You’ll look at how they are produced and approved, who is involved, and who is accountable. You’ll also see how they are used as a tool to guide good decision-making.<br />
+Link: <a href="https://learn.civilservice.gov.uk/courses/54tAKkFVS_GNAREhE4wLNw" class="uri govuk-link">https://learn.civilservice.gov.uk/courses/54tAKkFVS_GNAREhE4wLNw</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">The Seven Cs of Consulting</span><br />
+Type: Book<br />
+Source: Mick Cope<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: The only complete and definitive guide to the consulting process. This updated second edition contains new models and includes a very timely additional section on ethical consulting.<br />
+Link: <a href="https://www.goodreads.com/book/show/355030.The_Seven_Cs_of_Consulting" class="uri govuk-link">https://www.goodreads.com/book/show/355030.The_Seven_Cs_of_Consulting</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Plain Words</span><br />
+Type: Book<br />
+Source: Rebecca Gowers, Ernest Gowers<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: The book is intended simply as a guide to the proper use of English for the Civil Service. Within a year, however, its humour, charm and authority had made it a bestseller. Six decades on, writer Rebecca Gowers has created a new edition of this now-classic work that both revises and celebrates her great-grandfather’s original. Plain Words is the essential guide to making yourself understood.<br />
+Link: <a href="https://www.google.co.uk/books/edition/Plain_Words/6B40AgAAQBAJ?hl=en&amp;gbpv=0" class="uri govuk-link">https://www.google.co.uk/books/edition/Plain_Words/6B40AgAAQBAJ?hl=en&amp;gbpv=0</a>
+</p>
+</div></div>
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-1-heading-6">
+OR Society
+</span>
+</h2>
+</div>
+<div id="accordion-1-content-6" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-6">
+<p class="govuk-body">
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=OR%20Society" class="govuk-link">Reviews: OR Society courses</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: System Dynamics</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: You will become familiar with topics including system dynamics modelling process, feedback processes, causal loop diagram, group model building and much more. This course is designed to help you develop a critical and practical understanding of System Dynamics methods with a focus on qualitative and quantitative system dynamics practice.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Problem Structuring Methods</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This course will help you become better equipped to understand OR’s role in managing organisations, supporting strategic thinking and delivering projects. You will develop a critical and practical understanding of Problem Structuring Methods (PSMs), with a focus on Soft Systems Methodology and Strategic Options Development and Analysis.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Data Envelopment Analysis</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: On this course, you will discuss how data envelopment analysis (DEA) is used to assess the efficiency, performance and productivity of organisations and you will gain practical experience of solving problems with DEA models using Excel Solver. This general introduction to improving efficiency will equip you to support policy-making and decision-makers in your organisation.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: OR and the OR Process</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This single-day course will help you develop an understanding of operational research (OR) and the OR process. This methodology of OR provides the framework within which techniques and models are used to address real-world problems. As such, this day does not focus on particular techniques, tools or modelling methods, but on how OR is practiced.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: OR &amp; Strategy</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This course will help you to explore the range of operational research methods and models available for supporting strategy. You will develop skills in applying these methods through a combination of lectures and hand-on sessions, including a thorough session in scenario planning. You will leave this course better equipped to apply OR principles to strategic activity to the benefit of your business.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Essential OR Skills for Practitioners</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This course is a formal introduction to the breadth of tools and techniques used by operational research (OR) practitioners, including everything from problem structuring through to data collection, modelling and simulation. This intensive one-day course is perfect for those who are new to OR and those interested in transitioning into an OR role.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Delivering OR for Practitioners</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: The aim of this course is to develop your professionalism and integrity by preparing you to take on more challenging roles to progress your career. You will be equipped with knowledge and skills to confidently prepare you for managerial roles and complex projects, cultivating your professional judgement as you go. The course uses practical examples throughout, enabling you to practise in a safe environment, selecting and defending your choices<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Statistical Methods in OR: Descriptive Statistics, Sampling and Regression</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This course will help you build or refresh your statistical skills, with a particular focus on sampling and regression analysis. During the day you will work on real-world case studies where the theoretical concepts can be applied and their interpretation discussed via group work. You will leave the course with a greater understanding of what Normal Distribution is and how to apply it to “real world” situations in your workplace, such as quality control problems and sampling decisions.
+</p>
+<p class="govuk-body">
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Statistical Methods in OR: Forecasting</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This introductory practical course will help you get to grips with making different types of forecast, as well as practising carrying out some techniques yourself using simple statistical software. You will leave with a good overview of the various different basic forecasting methods used in predicting the uncertain nature of business trends and, as a result, you’ll be better able to help managers make better business decisions.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Optimisation and (Meta-) Heuristics</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: This course will put you into the heart of linear programming (LP), the most commonly used optimisation methodology and the practical solution of LP models, we will also briefly look at several other optimisation techniques. By examining optimisation models, objective functions, constraints and the kinds of assumptions made in creating solutions, you will leave this course better able to interpret the optimal solution, conduct sensitivity analysis and solve LPs for your business.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Simulation</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: The purpose of this day is to develop an understanding of the role of simulation in a business environment and how it can aid decision making. Throughout the day the participants will gain an appreciation of the process of developing a simulation model, with practical exercises and group work.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Foundations of OR: Statistical Methods in OR: Multivariate Models</span><br />
+Type: Face to face<br />
+Source: OR Society<br />
+Time: See OR Society<br />
+Cost: See OR Society<br />
+Description: The purpose of this day is to help you develop an understanding of some common multivariate statistical techniques which can be of value to the OR practitioner. Your knowledge will grow through a combination of short introductions to the methods in question followed by hand-on sessions using an appropriate software package.<br />
+Link: <a href="https://www.theorsociety.com/training/" class="uri govuk-link">https://www.theorsociety.com/training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">OR Society Webinars</span><br />
+Type: Online<br />
+Source: OR Society<br />
+Time: 1 hour<br />
+Cost: Free<br />
+Description: The OR Society webinars are for an hour and will feature expert speakers from a variety of OR fields, sharing their case studies, successes and learning outcomes, providing you with a wealth of unique knowledge, insight, and experience.<br />
+Link: <a href="https://www.theorsociety.com/training/webinars/" class="uri govuk-link">https://www.theorsociety.com/training/webinars/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">How to design and deliver high impact data analytics projects</span><br />
+Type: Online<br />
+Source: OR Society<br />
+Time: 1 day<br />
+Cost: See OR Society<br />
+Description: Many commercial or public sector organisations employ data analysts and data scientists to help them solve some of the most pressing tactical or strategic business problems. However, very few of the projects that are worked on make a tangible impact. This course will prepare delegate to tackle such situations, manage and embed high quality analytics products while teaching them to provide and maintain analytics service, which will be trusted by high-level executives.<br />
+Link: <a href="https://www.theorsociety.com/training/online-training/" class="uri govuk-link">https://www.theorsociety.com/training/online-training/</a>
+</p>
+</div></div>
+<div class="govuk-accordion__section">
+<div class="govuk-accordion__section-header">
+<h2 class="govuk-accordion__section-heading">
+<span class="govuk-accordion__section-button" id="accordion-1-heading-7">
+Other GORS Resources
+</span>
+</h2>
+</div>
+<div id="accordion-1-content-7" class="govuk-accordion__section-content" aria-labelledby="accordion-1-heading-7">
+<p class="govuk-body">
+<a href="https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources" class="govuk-link">Reviews: Other GORS Resources</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">GORS GFSA L&amp;D framework</span><br />
+Type: Online<br />
+Source: GORS GFSA Committee<br />
+Time: N/A<br />
+Cost: Refer to framework<br />
+Description: This pack takes you through everything you need to know about being on the GORS Fast Steam including joining the Fast Stream, your development pathway through the scheme, information on rotations and some case studies on the experiences of current Fast Streamers. This pack is supplemented by other more detailed guides including the GFSA induction guide, GFSA moves guidance and guidance for line managers.<br />
+Link: <a href="mailto:charlotte.stock@justice.gov.uk,todd.davidson@beis.gov.uk" class="uri govuk-link">mailto:charlotte.stock@justice.gov.uk,todd.davidson@beis.gov.uk</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Analysis Function Online Skills Tool</span><br />
+Type: Online<br />
+Source: Government Analysis Function<br />
+Time: N/A<br />
+Cost: Free<br />
+Description: The tool offers the opportunity for users to self-reflect against the professional skills required for various analytical career paths and to access role- and skill-specific training. Your profession support team and the Analysis Function Capability team can also use the tool to better understand the skills of our people, helping us to provide targeted and prioritised capability building solutions.<br />
+Link: <a href="https://ui.comaea.com/b/users/login" class="uri govuk-link">https://ui.comaea.com/b/users/login</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">CPD Log</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: It is compulsory for ORs and Data Scientists in the Government Operational Research Service (GORS) to continue their professional development and to record the development activities in this log book. Maintaining effective CPD is part of your role as a professional Operational Researcher or Data Scientist.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/846/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/846/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">OR Techniques List</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This slide pack contains all the OR techniques as listed in the competency framework. It combines a description of the technique (written in conjunction with John Ranyard and Graham Rand of the Department of Management Science, Lancaster University Management School) including situations when and where the technique could be used in, links to examples of projects as well as a range of resources. It should be used as a guide for CPD and aid self learning.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/678/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/678/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Mentoring Guidance</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This webpage is an introduction to mentoring GORS members. The aim is to help members develop a productive mentoring relationship with a more experienced colleague from within GORS.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/competencies/mentors/" class="uri govuk-link">http://www.operational-research.gov.uk/members/competencies/mentors/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">GORS Competency Framework</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: GORS professional competencies by grade.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/796/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/796/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">GORS Induction Pack</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: For new starters. This guide has been put together by fellow GORS analysts to try to answer some questions you may have as you get settled in.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/807/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/807/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Study Group How-to</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This document outlines how operational researchers in DWP have used self-directed learning to build their knowledge of operational research (OR) techniques, via a series of interactive study groups. It is intended to offer advice to analysts wishing to set up their own study group.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/829/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/829/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Directory of MOOCs</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This spreadhseet is a non-exhaustive compilation of relevant MOOCs (Massive Open Online Courses).<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/676/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/676/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">OR postcards</span><br />
+Type: Online<br />
+Source: GORS<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This spreadsheet gives a sample of OR projects in government, offering a glimpse into the types of work being done in different departments and a valuable insight into existing technical use cases.<br />
+Link: <a href="http://www.operational-research.gov.uk/members/library/download/677/" class="uri govuk-link">http://www.operational-research.gov.uk/members/library/download/677/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">OR Society course index</span><br />
+Type: Online<br />
+Source: The OR Society<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: The OR Society offer a range of topics to support operational research, data science and analytics community. They can help build your skills and confidence as an OR professional. All courses are delivered by subject matter experts, so you can immediately apply the latest best practice.<br />
+Link: <a href="https://www.theorsociety.com/training/online-training/" class="uri govuk-link">https://www.theorsociety.com/training/online-training/</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Agile in OR</span><br />
+Type: Online<br />
+Source: GORS (via MS Teams)<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This teams channel is the home of the Agile in OR community, who meet periodically and share resources that are useful for practitioners and learners.<br />
+Link: <a href="https://teams.microsoft.com/l/channel/19%3a34a6fb86e340428aab793f4be7ed2e38%40thread.skype/Agile%2520in%2520OR?groupId=9f299e8e-bbdf-4a35-bc87-d8d86163a05e&amp;tenantId=cbac7005-02c1-43eb-b497-e6492d1b2dd8" class="uri govuk-link">https://teams.microsoft.com/l/channel/19%3a34a6fb86e340428aab793f4be7ed2e38%40thread.skype/Agile%2520in%2520OR?groupId=9f299e8e-bbdf-4a35-bc87-d8d86163a05e&amp;tenantId=cbac7005-02c1-43eb-b497-e6492d1b2dd8</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Systems Thinking Interest Group (STIG)</span><br />
+Type: Online<br />
+Source: GORS (via Khub)<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: This Knowledge Hub community is an interest group for systems thinking. It is a resource for developing awarenes and capability of systems thinking and to build a network of people who can provide advice and experience.<br />
+Link: <a href="https://khub.net/web/systems-thinking-interest-group" class="uri govuk-link">https://khub.net/web/systems-thinking-interest-group</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Aqua Book</span><br />
+Type: Online<br />
+Source: HMT<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Official guidance on producing quality analysis for government.<br />
+Link: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/416478/aqua_book_final_web.pdf" class="uri govuk-link">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/416478/aqua_book_final_web.pdf</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Magenta Book</span><br />
+Type: Online<br />
+Source: HMT<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Central Government guidance on evaluation.<br />
+Link: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/879438/HMT_Magenta_Book.pdf" class="uri govuk-link">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/879438/HMT_Magenta_Book.pdf</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Green Book</span><br />
+Type: Online<br />
+Source: HMT<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: Central Government guidance on appraisal and evaluation.<br />
+Link: <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/938046/The_Green_Book_2020.pdf" class="uri govuk-link">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/938046/The_Green_Book_2020.pdf</a>
+</p>
+<p class="govuk-body">
+<span class="govuk-!-font-weight-bold">Stats Code of Practice</span><br />
+Type: Online<br />
+Source: OSR<br />
+Time: N/A<br />
+Cost: N/A<br />
+Description: The Code of Practice for Statistics sets the standards that producers of official statistics should commit to. The Code benefits all of us, as users and citizens. Compliance with the Code gives you confidence that published government statistics have public value, are high quality, and are produced by people and organisations that are trustworthy.<br />
+Link: <a href="https://code.statisticsauthority.gov.uk/wp-content/uploads/2018/02/Code-of-Practice-for-Statistics.pdf" class="uri govuk-link">https://code.statisticsauthority.gov.uk/wp-content/uploads/2018/02/Code-of-Practice-for-Statistics.pdf</a>
 </p>
 </div></div>
 </div>
@@ -6719,4 +7443,3 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 
 </html>
-
