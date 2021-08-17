@@ -4056,6 +4056,19 @@ padding-top: 10px; } }
 <script src="/html5-shiv/html5shiv.js"></script>
 <![endif]-->
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -4163,7 +4176,7 @@ This is new – your
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper " id="main-content" role="main">
-<h1 id="disclaimer" class="govuk-heading-xl">Disclaimer</h1>
+<h1 class="govuk-heading-xl" id="disclaimer">Disclaimer</h1>
 <p class="govuk-body">
 The information contained in this website is for general information purposes only. The information is provided by GORS L&amp;D Pages team and while we endeavour to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
 </p>
@@ -4177,7 +4190,7 @@ Through this website you are able to link to other websites which are not under 
 Every effort is made to keep the website up and running smoothly. However, the GORS L&amp;D Pages team takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.
 </p>
 <p class="govuk-body">
-The information presented on this website is classified as OFFICIAL according to the Government Security Classifications Policy, however if for any reason you would like information, links or attachments to be removed, please contact us at <a href class="govuk-link">SET UP EMAIL</a>. We will endeavour to respond as soon as possible.
+The information presented on this website is classified as OFFICIAL according to the Government Security Classifications Policy, however if for any reason you would like information, links or attachments to be removed, please contact us at <a href="mailto:gors-ld@justice.gov.uk" class="govuk-link">GORS-LD@justice.gov.uk</a>. We will endeavour to respond as soon as possible.
 </p>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 <div>
@@ -6631,4 +6644,3 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 
 </html>
-
