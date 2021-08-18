@@ -4056,6 +4056,19 @@ padding-top: 10px; } }
 <script src="/html5-shiv/html5shiv.js"></script>
 <![endif]-->
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -4163,15 +4176,15 @@ This is new – your
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper " id="main-content" role="main">
-<h1 id="faqs" class="govuk-heading-xl">FAQs</h1>
+<h1 class="govuk-heading-xl" id="faqs">FAQs</h1>
 <p class="govuk-body">
-If you believe any of the information presented below is incorrect, please get in touch here: <a href class="govuk-link">SET UP EMAIL</a>
+If you believe any of the information presented below is incorrect, please <a href="mailto:40885423.beisgov.onmicrosoft.com@emea.teams.ms" class="govuk-link">contact us here</a>
 </p>
-<h3 id="q-how-can-i-book-an-external-or-civil-service-learning-course" class="govuk-heading-m">Q: How can I book an external or Civil Service Learning Course?</h3>
+<h3 class="govuk-heading-m" id="q-how-can-i-book-an-external-or-civil-service-learning-course">Q: How can I book an external or Civil Service Learning Course?</h3>
 <p class="govuk-body">
-<span class="govuk-!-font-weight-bold">A:</span> See our document on how to book an external course: <a href="files/GORS%20Guide%20to%20booking%20an%20external%20course%20v2.0.pptx" class="govuk-link">GORS Guide to booking an external courses</a>
+<span class="govuk-!-font-weight-bold">A:</span> See our document on how to book an external course: <a href="https://github.com/GORSlearningdevelopmentpages/GORSlearningdevelopmentpages.github.io/raw/master/docs/files/GORS%20Guide%20to%20booking%20an%20external%20course%20v2.0.pptx" class="govuk-link">GORS Guide to booking an external courses</a>
 </p>
-<h3 id="q-how-much-ld-time-am-i-entitled-to" class="govuk-heading-m">Q: How much L&amp;D time am I entitled to?</h3>
+<h3 class="govuk-heading-m" id="q-how-much-ld-time-am-i-entitled-to">Q: How much L&amp;D time am I entitled to?</h3>
 <p class="govuk-body">
 <span class="govuk-!-font-weight-bold">A:</span> There are a few important numbers to keep in mind.
 </p>
@@ -4189,26 +4202,26 @@ A general rule of thumb is that L&amp;D should take on average <span class="govu
 <p class="govuk-body">
 Don’t forget that learning on the job also counts as development (and can be included towards the required 100 hours for GORS).
 </p>
-<h3 id="q-how-should-i-log-my-100-hours-of-cpd-for-gors" class="govuk-heading-m">Q: How should I log my 100 hours of CPD for GORS?</h3>
+<h3 class="govuk-heading-m" id="q-how-should-i-log-my-100-hours-of-cpd-for-gors">Q: How should I log my 100 hours of CPD for GORS?</h3>
 <p class="govuk-body">
-<span class="govuk-!-font-weight-bold">A:</span> The following template is endorsed by GORS CMU: <a href="files/GORS_CPD_Log.xlsm" class="govuk-link">GORS CPD Log</a>.
+<span class="govuk-!-font-weight-bold">A:</span> The following guide and log template (see annex of linked guide) is endorsed by GORS CMU: <a href="http://www.operational-research.gov.uk/members/library/download/846/" class="govuk-link" target="_blank">GORS CPD Log</a>.
 </p>
 <p class="govuk-body">
 To note, from April 2020 it will become mandatory for the CPD log to be signed off by another OR.
 </p>
-<h3 id="q-how-should-i-decide-what-ld-to-undertake" class="govuk-heading-m">Q: How should I decide what L&amp;D to undertake?</h3>
+<h3 class="govuk-heading-m" id="q-how-should-i-decide-what-ld-to-undertake">Q: How should I decide what L&amp;D to undertake?</h3>
 <p class="govuk-body">
 <span class="govuk-!-font-weight-bold">A:</span> Speak to your line manager or mentor about your development needs in the first instance. If you’re unsure what learning will help you meet those needs, or would just like to browse what’s available, have a look at our <a href="library.html" class="govuk-link">L&amp;D Library</a>.
 </p>
-<h3 id="q-what-can-i-do-to-make-time-for-ld" class="govuk-heading-m">Q: What can I do to make time for L&amp;D?</h3>
+<h3 class="govuk-heading-m" id="q-what-can-i-do-to-make-time-for-ld">Q: What can I do to make time for L&amp;D?</h3>
 <p class="govuk-body">
 <span class="govuk-!-font-weight-bold">A:</span> Some people find it helpful to schedule a certain time each week or fortnight to dedicate to L&amp;D activities. It can be helpful to speak with your line manager about this if you’re concerned about getting pulled into other work during this time – it may be possible for you to agree a “quiet” period each week where you ignore incoming emails and focus solely on L&amp;D. At times business need may mean you can’t spend the same amount of time on L&amp;D, though this should average out over a year.
 </p>
-<h3 id="q-im-struggling-to-get-enough-ld-time-what-should-i-do" class="govuk-heading-m">Q: I’m struggling to get enough L&amp;D time, what should I do?</h3>
+<h3 class="govuk-heading-m" id="q-im-struggling-to-get-enough-ld-time-what-should-i-do">Q: I’m struggling to get enough L&amp;D time, what should I do?</h3>
 <p class="govuk-body">
 <span class="govuk-!-font-weight-bold">A:</span> If you feel you’re not getting enough time to do the development you need, speak to your line manager. Development should be a key part of everyone’s monthly performance discussions with their manager. You’re also welcome to discuss this with your head of profession or deputy head of profession as all badged GORS members are expected to take on a certain amount of CPD each year.
 </p>
-<h3 id="q-what-counts-as-or-cpd" class="govuk-heading-m">Q: What counts as OR CPD?</h3>
+<h3 class="govuk-heading-m" id="q-what-counts-as-or-cpd">Q: What counts as OR CPD?</h3>
 <p class="govuk-body">
 <span class="govuk-!-font-weight-bold">A:</span> CPD activities should be focused on learning something new and relevant. It is sometimes helpful to refresh old knowledge, but the focus is on providing new insights, competencies, behaviours or learning. It is always the outcome of the learning rather than the method that matters. Any activity can count as CPD so long as something new and relevant has been learnt.
 </p>
@@ -4262,7 +4275,7 @@ Teaching and coaching.
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 <div>
 <p class="govuk-body-s">
-This site was built using <a href="https://ukgovdatascience.github.io/govdown/" class="govuk-link">govdown</a>.
+This site was built using <a href="https://ukgovdatascience.github.io/govdown/" class="govuk-link" target="_blank">govdown</a>.
 </p>
 </div>
 </main>
@@ -6711,4 +6724,3 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 
 </html>
-

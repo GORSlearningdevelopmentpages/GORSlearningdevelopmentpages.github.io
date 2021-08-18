@@ -4056,6 +4056,19 @@ padding-top: 10px; } }
 <script src="/html5-shiv/html5shiv.js"></script>
 <![endif]-->
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 <style type="text/css">.hljs-literal {
 color: #990073;
 }
@@ -4163,7 +4176,7 @@ This is new – your
 
 <div class="govuk-width-container">
 <main class="govuk-main-wrapper " id="main-content" role="main">
-<h1 id="welcome-to-the-gors-ld-pages" class="govuk-heading-xl">Welcome to the GORS L&amp;D Pages!</h1>
+<h1 class="govuk-heading-xl" id="welcome-to-the-gors-ld-pages">Welcome to the GORS L&amp;D Pages!</h1>
 <div>
 <p class="govuk-body-l">
 This site aims to be a one-stop shop for all learning &amp; development resources pertaining to Operational Research within the Government Operational Research Service (GORS).
@@ -4172,9 +4185,9 @@ This site aims to be a one-stop shop for all learning &amp; development resource
 <p class="govuk-body">
 It’s tough being an operational researcher, there’s so much you need to learn, but it isn’t always easy to acquire that knowledge when needed. Resources are quite sparse and not always easily obtainable, this resource aims to fix that. Here you will find links to resources that we think will be useful to you as an operational researcher in the civil service. This site is split into two sections, the L&amp;D Library and FAQs:
 </p>
-<h2 id="ld-library" class="govuk-heading-l">L&amp;D Library</h2>
+<h2 class="govuk-heading-l" id="ld-library">L&amp;D Library</h2>
 <p class="govuk-body">
-Our <a href="library.html" class="govuk-link">L&amp;D Library</a> is a database of curated courses that cover various topics which fall under the remit of a typical operational researcher. Here we cover:
+Our <a href="library.html" class="govuk-link">L&amp;D Library</a> is a database of curated courses that cover various topics which fall under the remit of a typical operational researcher, this page also includes ratings &amp; reviews shared by our fellow operational researchers. The L&amp;D Library covers:
 </p>
 <ol class="govuk-list govuk-list--number">
 <li class="govuk-body">
@@ -4192,10 +4205,16 @@ Soft OR
 <li class="govuk-body">
 General Professional Skills
 </li>
+<li class="govuk-body">
+OR Society
+</li>
+<li class="govuk-body">
+Other GORS Resources
+</li>
 </ol>
-<h2 id="faqs" class="govuk-heading-l">FAQs</h2>
+<h2 class="govuk-heading-l" id="faqs">FAQs</h2>
 <p class="govuk-body">
-Our <a href="faq.html" class="govuk-link">FAQs</a> page answers some of those niggling questions you may have about GORS and it’s L&amp;D approach. Here we cover:
+Our <a href="faq.html" class="govuk-link">FAQs</a> page answers some of those niggling questions you may have about GORS and it’s L&amp;D approach. The FAQs section covers:
 </p>
 <ol class="govuk-list govuk-list--number">
 <li class="govuk-body">
@@ -4212,13 +4231,13 @@ CPD Log
 <br>
 </p>
 <div class="govuk-warning-text"><span class="govuk-warning-text__icon" aria-hidden="true">!</span><strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>
-If you have any suggestions for these pages, questions about L&amp;D, would like to run an internal course for GORS members, or would like to get involved with our group please get in touch with us: <a href class="govuk-link">SET UP EMAIL</a>
+If you have any suggestions for these pages, questions about L&amp;D, would like to run an internal course for GORS members, or would like to get involved with our group please get in <a href="mailto:40885423.beisgov.onmicrosoft.com@emea.teams.ms" class="govuk-link">contact with us here</a>
 </strong>
 </div>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 <div>
 <p class="govuk-body-s">
-This site was built using <a href="https://ukgovdatascience.github.io/govdown/" class="govuk-link">govdown</a>.
+This site was built using <a href="https://ukgovdatascience.github.io/govdown/" class="govuk-link" target="_blank">govdown</a>.
 </p>
 </div>
 </main>
@@ -6667,4 +6686,3 @@ document.getElementsByTagName("head")[0].appendChild(script);
 </body>
 
 </html>
-
