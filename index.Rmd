@@ -27,12 +27,12 @@ Our [FAQs](faq.html) page answers some of those niggling questions you may have 
 <br>
 
 ::: {.warning}
-If you have any suggestions for these pages, questions about L&D, would like to run an internal course for GORS members, or would like to get involved with our group please get in touch with us: [GORS-LD@justice.gov.uk](mailto:gors-ld@justice.gov.uk)
+If you have any suggestions for these pages, questions about L&D, would like to run an internal course for GORS members, or would like to get involved with our group please get in [contact with us here](mailto:40885423.beisgov.onmicrosoft.com@emea.teams.ms)
 :::
 
 
 ---
 
 ::: {.small-para}
-This site was built using [govdown](https://ukgovdatascience.github.io/govdown/).
+This site was built using [govdown](https://ukgovdatascience.github.io/govdown/){target="_blank"}.
 :::
