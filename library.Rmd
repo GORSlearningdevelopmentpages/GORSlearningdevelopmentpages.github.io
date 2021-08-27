@@ -8,6 +8,7 @@ If you would like to suggest any courses, resources, or other additions to the L
 
 ::: {.warning}
 If you utilised any of the resources below please [leave a review](https://airtable.com/shrDbLwOUCjoOi34D){target="_blank"}, all comments are anonymous and they help others to understand the usefulness of the resources linked below!
+You can also see the [full list of reviewed courses.](https://airtable.com/tblZfSMRzaGsSuODU/viw80qIgImp1L8Brq?blocks=hide) 
 :::
 
 ```{r, include = FALSE}
@@ -19,7 +20,7 @@ data <- read_csv("Copy of GORS LD Pages Course List Draft 2.csv")
 
 ::: {.accordion}
 ## General Analytical Skills
-[Reviews: General Analytical Skills](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Analytical%20Skills){target="_blank"} 
+[Reviews for General Analytical Skills courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Analytical%20Skills){target="_blank"} 
 
 ```{r, results = 'asis', echo = FALSE}
 
@@ -43,7 +44,7 @@ for (i in 1:nrow(data_gen)){
 
 
 ## Programming/Data Science
-[Reviews: Programming/Data Science](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Programming/Data%20Science){target="_blank"} 
+[Reviews for Programming/Data Science courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Programming/Data%20Science){target="_blank"} 
 
 ```{r courses_prog , results = 'asis', echo = FALSE}
 data_spec <- data %>% filter(Group == "Programming/Data Science") 
@@ -62,7 +63,7 @@ for (i in 1:nrow(data_spec)){
 
 
 ## Hard OR
-[Reviews: Hard OR courses courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Hard%20OR){target="_blank"} 
+[Reviews for Hard OR courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Hard%20OR){target="_blank"} 
 ```{r courses_hard , results = 'asis', echo = FALSE}
 data_hard <- data %>% filter(Group == "Hard OR") 
 for (i in 1:nrow(data_hard)){
@@ -80,7 +81,7 @@ for (i in 1:nrow(data_hard)){
 
 
 ## Soft OR
-[Reviews: Soft OR courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Soft%20OR){target="_blank"} 
+[Reviews for Soft OR courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Soft%20OR){target="_blank"} 
 
 ```{r courses_soft , results = 'asis', echo = FALSE}
 data_soft <- data %>% filter(Group == "Soft OR") 
@@ -98,7 +99,7 @@ for (i in 1:nrow(data_soft)){
 
 
 ## General Professional Skills
-[Reviews: General Professional skills courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Professional%20Skills){target="_blank"} 
+[Reviews for General Professional skills courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=General%20Professional%20Skills){target="_blank"} 
 
 ```{r courses_prof , results = 'asis', echo = FALSE}
 data_gen_prof <- data %>% filter(Group == "General Professional Skills") 
@@ -117,7 +118,7 @@ for (i in 1:nrow(data_gen_prof)){
 
 
 ## OR Society
-[Reviews: OR Society courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=OR%20Society){target="_blank"} 
+[Reviews for OR Society courses](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=OR%20Society){target="_blank"} 
 
 
 ```{r courses_soc , results = 'asis', echo = FALSE}
@@ -138,7 +139,7 @@ for (i in 1:nrow(data_or_soc)){
 ```
 
 ## Other GORS Resources
-[Reviews: Other GORS Resources](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources){target="_blank"} 
+[Reviews for Other GORS Resources](https://airtable.com/shrVIHzn0GHqLIZAD/tblZfSMRzaGsSuODU?filter_Group=Other%20GORS%20Resources){target="_blank"} 
 ```{r courses_other , results = 'asis', echo = FALSE}
 data_other <- data %>% filter(Group == "Other GORS Resources") 
 for (i in 1:nrow(data_other)){
