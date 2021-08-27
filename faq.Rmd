@@ -20,7 +20,7 @@ Don't forget that learning on the job also counts as development (and can be inc
 To note, from April 2020 it will become mandatory for the CPD log to be signed off by another OR.
 
 ### Q: How should I decide what L&D to undertake?
-**A:** Speak to your line manager or mentor about your development needs in the first instance. If you're unsure what learning will help you meet those needs, or would just like to browse what's available, have a look at our [L&D Library](library.html).
+**A:** Speak to your line manager or mentor about your development needs in the first instance. You can also use the [Analysis Function online skills tool](analysis.function@ons.gov.uk) to help identify gaps in your L&D and suggested courses. If you'd like to browse what's else is available, have a look at our [L&D Library](library.html).
 
 ### Q: What can I do to make time for L&D?
 **A:** Some people find it helpful to schedule a certain time each week or fortnight to dedicate to L&D activities. It can be helpful to speak with your line manager about this if you're concerned about getting pulled into other work during this time -- it may be possible for you to agree a "quiet" period each week where you ignore incoming emails and focus solely on L&D. At times business need may mean you can't spend the same amount of time on L&D, though this should average out over a year.

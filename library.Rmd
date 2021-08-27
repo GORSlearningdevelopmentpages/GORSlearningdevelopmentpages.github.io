@@ -8,7 +8,7 @@ If you would like to suggest any courses, resources, or other additions to the L
 
 ::: {.warning}
 If you utilised any of the resources below please [leave a review](https://airtable.com/shrDbLwOUCjoOi34D){target="_blank"}, all comments are anonymous and they help others to understand the usefulness of the resources linked below!
-To see the full list of reviewed courses, [click here.](https://airtable.com/tblZfSMRzaGsSuODU/viw80qIgImp1L8Brq?blocks=hide) 
+You can also see the [full list of reviewed courses.](https://airtable.com/tblZfSMRzaGsSuODU/viw80qIgImp1L8Brq?blocks=hide) 
 :::
 
 ```{r, include = FALSE}
