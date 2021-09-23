@@ -11,7 +11,9 @@ navbar:
 output:
   govdown::govdown_document:
     font: "sans-serif"
-    favicon: "none"
+    favicon: "govuk"
+    logo: "images/blue_GORS_logo.png"
+    logo_url: "https://gorslearningdevelopmentpages.github.io/index.html"
     logo_text: "GORS"
     page_title: "GORS Learning & Development Pages"
     title: "GORS L&D Pages"
