@@ -12,7 +12,7 @@ output:
   govdown::govdown_document:
     font: "sans-serif"
     favicon: "govuk"
-    logo: "images/blue_GORS_logo.png"
+    logo: "images/govuk-mask-icon.svg"
     logo_url: "https://gorslearningdevelopmentpages.github.io/index.html"
     logo_text: "GORS"
     page_title: "GORS Learning & Development Pages"
