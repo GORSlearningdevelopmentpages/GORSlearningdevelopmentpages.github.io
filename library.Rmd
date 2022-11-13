@@ -15,7 +15,7 @@ You can also find the [full list of reviews here.](https://airtable.com/shrVIHzn
 library(tidyverse)
 library(govdown)
 
-data <- read_csv("GORS L&D Pages resource list.csv")
+data <- read_csv("GORS LD Pages resource list.csv")
 ```
 
 ::: {.accordion}
